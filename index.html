@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="cantainer">
+
+        <h1>Password Generator</h1>
+
+        <div class = display_cantainer>
+            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+
+            <button data-copy>
+                <span data-copyMSg></span>
+                <img src="" alt="copy" width="23" height="23">
+            </button>
+        </div>
+
+        <div class="input_cantainer">
+            <!-- password length -->
+            <div class="length_cantainer">
+                <p>Password length</p>
+                <p data-lengthNumber>0</p>
+            </div>
+
+            <!-- slider -->
+            <input type="range" min="0"  max="20" class="slider" step="1" data-lengthSlider>
+
+            <!-- checkboxes -->
+            <div class="check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Includes Uppercase letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Includes lowercase letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Includes numbers</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Includes symbols</label>
+            </div>
+
+            <!-- strength action -->
+             <div class="strngth_cantainer">
+                <p>strength</p>
+                <div class="indicator" data-indicator></div>
+             </div>
+
+             <!-- generate Password -->
+              <button class="generateBtn">Generate Password</button>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
